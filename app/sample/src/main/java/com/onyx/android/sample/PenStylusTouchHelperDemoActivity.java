@@ -2,7 +2,6 @@ package com.onyx.android.sample;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Paint;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -34,15 +33,12 @@ public class PenStylusTouchHelperDemoActivity extends AppCompatActivity {
 
     private TouchHelper touchHelper;
 
-    Paint paint = new Paint();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pen_stylus_touch_helper_demo);
 
         ButterKnife.bind(this);
-        initPaint();
         initSurfaceView();
     }
 
@@ -62,13 +58,6 @@ public class PenStylusTouchHelperDemoActivity extends AppCompatActivity {
     protected void onDestroy() {
         touchHelper.closeRawDrawing();
         super.onDestroy();
-    }
-
-    private void initPaint(){
-        paint.setAntiAlias(true);
-        paint.setStyle(Paint.Style.STROKE);
-        paint.setColor(Color.BLACK);
-        paint.setStrokeWidth(5);
     }
 
     private void initSurfaceView() {
