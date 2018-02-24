@@ -134,7 +134,6 @@ public class PenStylusTouchHelperDemoActivity extends AppCompatActivity {
         public void onBeginRawDrawing(boolean b, TouchPoint touchPoint) {
             Log.d(TAG, "onBeginRawDrawing");
             Log.d(TAG,touchPoint.getX() + ", " + touchPoint.getY());
-            countRec = 0;
         }
 
         @Override
